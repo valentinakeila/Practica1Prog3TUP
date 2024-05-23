@@ -7,23 +7,13 @@ namespace Web.Controllers
     [ApiController]
 
 
-    public class Ej4Controller : ControllerBase
+    public class Ej3Controller : ControllerBase
     {
         [HttpGet()]
-        public string Get([FromQuery] int number1, [FromQuery] int number2)
+        public string Get([FromQuery] string nombre, [FromQuery] string anios)
         {
-            if (number1 > number2)
-            {
-                return $"El numero {number1} es mayor";
-            }
-            else if (number1 < number2)
-            {
-                return $"El numero {number2} es mayor";
-            }
-            else
-            {
-                return $"Ambos numeros son iguales";
-            }
+            string result = $"Te llamas {nombre} y tienes {anios} años";
+            return result;
         }
     }
 }
